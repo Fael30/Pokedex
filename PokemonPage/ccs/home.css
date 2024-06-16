@@ -53,108 +53,6 @@ main h1{
     margin-top: 50px;
 }
 
-/*Wave de imagens*/
-.wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-}
-
-.items {
-    display: flex;
-    gap: 0.4rem;
-    perspective: calc(var(--index) * 35);
-}
-
-.item {
-    width: calc(var(--index) * 5);
-    height: calc(var(--index) * 12);
-    background-color: #222;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    filter: grayscale(1) brightness(.5);
-    transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
-    will-change: transform, filter, rotateY, width;
-    position: relative; 
-}
-
-.item::before, .item::after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 50px;
-    right: calc(var(--index) * -1);
-}
-
-.item::after {
-    left: calc(var(--index) * -1);
-}
-
-.items .item:hover {
-    filter: inherit;
-    transform: translateZ(calc(var(--index) * 10));
-}
-
-
-
-.items .item:hover + * {
-    filter: inherit;
-    transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
-    z-index: -1;
-}
-
-.items .item:hover + * + * {
-    filter: inherit;
-    transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
-    z-index: -2;
-}
-
-.items .item:hover + * + * + * {
-    filter: inherit;
-    transform: translateZ(calc(var(--index) * 2.5)) rotateY(30deg);
-    z-index: -3;
-}
-
-.items .item:hover + * + * + * + * {
-    filter: inherit;
-    transform: translateZ(calc(var(--index) * .6)) rotateY(15deg);
-    z-index: -4;
-}
-
-
-
-.items .item:has(+ :hover) {
-    filter: inherit;
-    transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
-}
-
-.items .item:has(+ * + :hover) {
-    filter: inherit;
-    transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
-}
-
-.items .item:has(+ * + * + :hover) {
-    filter: inherit;
-    transform: translateZ(calc(var(--index) * 2.5)) rotateY(-30deg);
-}
-
-.items .item:has(+ * + * + * + :hover) {
-    filter: inherit;
-    transform: translateZ(calc(var(--index) * .6)) rotateY(-15deg);
-}
-
-.items .item:active, .items .item:focus {
-    width: 9vw;
-    height: auto; 
-    filter: inherit;
-    z-index: 100;
-    transform: translateZ(calc(var(--index) * 10));
-    margin: 0 .45vw;
-    background-size: contain;
-}
 .maps{
     display: flex;
     width: 100%;
@@ -270,42 +168,29 @@ main h1{
     }
 }
 
-
-/*Midia Quares*/
-@media screen and (max-width: 768px) {
-    .items {
-        perspective: 600px; /* Ajuste a perspectiva para telas menores */
+@media (max-width: 768px) {
+    .logo {
+        background-size: 350px; /* Ajuste o tamanho conforme necessário */
+        height: 150px; /* Ajuste o tamanho conforme necessário */
+        margin-top: 20px; /* Ajuste o espaçamento conforme necessário */
     }
 
-    .item {
-        width: 12vw; /* Ajuste o tamanho dos itens para telas menores */
-        height: 65vw; /* Ajuste a altura dos itens para telas menores */
+    .maps img {
+        width: 100%; /* Imagem ocupando 100% da largura do seu container */
+        height: auto; /* Altura automática para manter proporções */
     }
 
-    .items .item:hover {
-        transform: translateZ(20px) rotateY(5deg); /* Ajuste da transformação no hover para telas menores */
+    .maps p {
+        width: 100%; /* Parágrafos ocupando 100% da largura do seu container */
+        text-align: center; /* Centralizando o texto */
+        font-size: 16px; /* Tamanho da fonte ajustável conforme necessário */
+        line-height: 1.6; /* Espaçamento entre linhas agradável para leitura */
+        margin-top: 10px; /* Espaçamento superior */
+        margin-bottom: 10px; /* Espaçamento inferior */
     }
 
-    .items .item:active, .items .item:focus {
-        transform: translateZ(20px); /* Ajuste da transformação ao clicar para telas menores */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .items {
-        perspective: 2000px; /* Ajuste a perspectiva para telas muito pequenas */
-    }
-
-    .item {
-        width: 40vw; /* Ajuste o tamanho dos itens para telas muito pequenas */
-        height: 122vw; /* Ajuste a altura dos itens para telas muito pequenas */
-    }
-
-    .items .item:hover {
-        transform: translateZ(15px) rotateY(3deg); /* Ajuste da transformação no hover para telas muito pequenas */
-    }
-
-    .items .item:active, .items .item:focus {
-        transform: translateZ(15px); /* Ajuste da transformação ao clicar para telas muito pequenas */
+    .maps span {
+        font-family: 'Times New Roman', Times, serif; /* Mantendo a família de fontes */
+        font-weight: bold; /* Ajustando o peso da fonte conforme necessário */
     }
 }
