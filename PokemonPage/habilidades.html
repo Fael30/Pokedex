@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon-Abilities</title>
+    <link rel="stylesheet" href="css/habilidades.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <button onclick="navigateToPage('home.html')">HOME</button>
+            <button onclick="navigateToPage('pokedex.html')">POKEDEX</button>
+            <button onclick="navigateToPage('moves.html')">MOVES</button>
+            <button onclick="navigateToPage('habilidades.html')">ABILITIES</button>
+        </div>
+        <div class="logo" style="background-image: url('images/Logos/ABiLiTieS-01-06-2024.png');"></div>
+    </header>
+    <section>
+        <div class="section-container">
+            <ul id="lista-abilities" class="abilities-table"></ul>
+           
+        </div>
+    </section>
+    <div id="loader-container" style="display: none;">
+        <div id="loader">
+            <img src="images/fundo/pokeball.svg" alt="Loading...">
+        </div>
+    </div>
+    <footer>
+        <button onclick="funcaoTopo()" id="myBtn" title="Go to top">Topo</button>
+        <div id="carrega-abilities" class="carregamais">
+            <button>Carregar Mais Abilities</button>
+        </div>
+    </footer>
+    <script src="scripts/habilidadesApi.js"></script>
+    <script src="scripts/habilidades.js"></script>
+</body>
+
+</html>

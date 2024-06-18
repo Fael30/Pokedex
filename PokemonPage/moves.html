@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon-Moves</title>
+    <link rel="stylesheet" href="css/moves.css">
+</head>
+
+<body class="grid">
+    <header>
+      <div class="nav">
+            <button onclick="navigateToPage('home.html')">HOME</button>
+            <button onclick="navigateToPage('pokedex.html')">POKEDEX</button>
+            <button onclick="navigateToPage('moves.html')">MOVES</button>
+            <button onclick="navigateToPage('habilidades.html')">ABILITIES</button>
+        </div>
+        <div class="logo" style="background-image: url('images/Logos/Moves-01-06-2024.png');"></div>
+    </header>
+    <main>
+        <div id="loader-container" style="display: none;">
+            <div id="loader">
+                <img src="images/fundo/pokeball.svg" alt="">
+            </div>
+        </div>
+        <section>
+            <div class="section-container">
+                <ol id="lista-moves" class="moves-table"></ol>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="carregamais">
+            <button id="carrega" type="button">
+                Carregar mais Movimentos
+            </button>
+        </div>
+        <div>
+            <button onclick="funcaoTopo()" id="myBtn" title="Ir para o topo">Topo</button>
+        </div>
+    </footer>
+    <script src="scripts/movesApi.js"></script>
+    <script src="scripts/moves.js"></script>
+</body>
+
+</html>
