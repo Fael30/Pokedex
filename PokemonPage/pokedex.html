@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="css/pokedex.css">
+
+</head>
+
+<body class="grid">
+    <header>
+        <div class="nav">
+            <button onclick="navigateToPage('home.html')">HOME</button>
+            <button onclick="navigateToPage('pokedex.html')">POKEDEX</button>
+            <button onclick="navigateToPage('moves.html')">MOVES</button>
+            <button onclick="navigateToPage('habilidades.html')">ABILITIES</button>
+        </div>
+        <div class="logo" style="background-image: url('images/Logos/PoK-DeX-01-06-2024.png');"></div>
+        <div>
+            <input type="checkbox" id="filter">
+            <i class="fa-solid fa-filter"></i>
+            <label for="filter" class="filter-button">
+                <span>Pesquisa Avançada</span>
+                <img src="images/filter/filter.png" alt="Open Filter">
+            </label>
+            <div class="filter-content">
+                <div class="type-filter">
+                    <button class="type-button" data-type="all">Todos</button>
+                    <button class="type-button fighting" data-type="fighting">Fighting</button>
+                    <button class="type-button fire" data-type="fire">Fire</button>
+                    <button class="type-button fairy" data-type="fairy">Fairy</button>
+                    <button class="type-button flying" data-type="flying">Flying</button>
+                    <button class="type-button ghost" data-type="ghost">Ghost</button>
+                    <button class="type-button ground" data-type="ground">Ground</button>
+                    <button class="type-button grass" data-type="grass">Grass</button>
+                    <button class="type-button psychic" data-type="psychic">Psychic</button>
+                    <button class="type-button poison" data-type="poison">Poison</button>
+                    <button class="type-button dark" data-type="dark">Dark</button>
+                    <button class="type-button dragon" data-type="dragon">Dragon</button>
+                    <button class="type-button water" data-type="water">Water</button>
+                    <button class="type-button electric" data-type="electric">Electric</button>
+                    <button class="type-button bug" data-type="bug">Bug</button>
+                    <button class="type-button normal" data-type="normal">Normal</button>
+                    <button class="type-button ice" data-type="ice">Ice</button>
+                    <button class="type-button steel" data-type="steel">Steel</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div id="loader-container" style="display: none;">
+            <div id="loader">
+                <img src="images/fundo/pokeball.svg" alt="">
+            </div>
+        </div>
+
+        <section class="content">
+            <div class="section-container">
+                <ol class="pokemons" id="pokemons"></ol>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="carregamais">
+            <button id="carrega" type="button">
+                Carregar mais Pokémon
+            </button>
+        </div>
+        <div>
+            <button onclick="funcaoTopo()" id="myBtn" title="Ir para o topo">Topo</button>
+        </div>
+    </footer>
+    <script src="scripts/pokeApi.js"></script>
+    <script src="scripts/pokedex.js"></script>
+</body>
+
+</html>
