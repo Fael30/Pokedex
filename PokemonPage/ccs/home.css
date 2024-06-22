@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --index: calc(1vw + 1vh);
     --transition: cubic-bezier(0.1, 0.7, 0, 1);
@@ -27,7 +28,7 @@ header {
 }
 
 .logo {
-    
+
     background-size: 350px;
     background-repeat: no-repeat;
     background-position: top center;
@@ -37,7 +38,7 @@ header {
 
 main {
     grid-area: section;
-   
+
 }
 
 footer {
@@ -47,33 +48,37 @@ footer {
     width: 100%;
 }
 
-main h1{
+main h1 {
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
 
-.maps{
+.maps {
     display: flex;
     width: 100%;
-   
     flex-direction: column;
     align-items: center;
 
 }
-.maps img{
+
+.maps img {
     width: 1200px;
-    height:850px;
-    
+    height: 850px;
+
 }
-.maps p{
+
+.maps p {
     width: 1200px;
-    float: center;
+    text-align: justify;
 }
-.maps span{
+
+.maps span {
     font-family: 'Times New Roman', Times, serif;
     font-size: bold;
+    text-align: justify;
 }
+
 /*Barra de Navegação*/
 .nav {
     width: 100%;
@@ -170,27 +175,27 @@ main h1{
 
 @media (max-width: 768px) {
     .logo {
-        background-size: 350px; /* Ajuste o tamanho conforme necessário */
-        height: 150px; /* Ajuste o tamanho conforme necessário */
-        margin-top: 20px; /* Ajuste o espaçamento conforme necessário */
+        background-size: 350px;
+        height: 150px;
+        margin-top: 20px;
     }
 
     .maps img {
-        width: 100%; /* Imagem ocupando 100% da largura do seu container */
-        height: auto; /* Altura automática para manter proporções */
+        width: 100%;
+        height: auto;
     }
 
     .maps p {
-        width: 100%; /* Parágrafos ocupando 100% da largura do seu container */
-        text-align: center; /* Centralizando o texto */
-        font-size: 16px; /* Tamanho da fonte ajustável conforme necessário */
-        line-height: 1.6; /* Espaçamento entre linhas agradável para leitura */
-        margin-top: 10px; /* Espaçamento superior */
-        margin-bottom: 10px; /* Espaçamento inferior */
+        width: 100%;
+        text-align: justify;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .maps span {
-        font-family: 'Times New Roman', Times, serif; /* Mantendo a família de fontes */
-        font-weight: bold; /* Ajustando o peso da fonte conforme necessário */
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
     }
 }
